@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<meta charset="utf-8">
+	<title>Cajas</title>
+</head>
+<body onload="ciclo();">
+	<nav id="nave">
+		<a href="index.html"><span id="name"><strong>Diego</strong> Aranda</span></a>
+	</nav>
+		
+	<script type="text/javascript">
+		var i=prompt("Ingrese la cantidad de cajas que desee crear:");
+			var numc=1;
+			if(i<=8){
+				while(numc<=i){
+					document.write('<article id="caja" style="background-color:#10375c">'+'<font color="#f3c623">Caja'+numc+'</FONT>'+'<article>');
+					numc++;
+				}
+			}
+			if(i>=9){
+				while(numc<=i){
+					document.write('<article id="cajahoriz" style="background-color:#f3c623">'+'<font color="#10375c">Caja'+numc+'</FONT>'+'<article>');
+					numc++;
+				}				
+			}
+	</script>
+<!-- AÑADIMOS ETIQUETA STYLE PARA COLOCAR LAS CAJAS EN HORIZONTAL DESPUÉS DE 9-->
+<style type="text/css">
+		#cajahoriz{
+  			display: inline-flex;	
+		}
+	</style>
+
+	<footer id="pie" class="fixed-bottom">
+	<p class="autor">Aranda Granados Diego</p>
+	<p class="autor">Sábado 13 Junio 2020</p>
+	<li class="contact"><a href="https://www.facebook.com/DiegoArandaGr/">Facebook</a></li>
+	<li class="contact"><a href="https://www.instagram.com/luca_raconteur935/">Instagram</a></li>
+	<p class="contact">4776304413</p>
+	<img src="img/GrimmeSombra.png" class="foto">
+</footer>
+</body>
+</html>

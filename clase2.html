@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<meta charset="utf-8">
+	<title>Factorial</title>
+</head>
+<body >
+	<nav id="nave">
+		<a href="index.html"><span id="name"><strong>Diego</strong> Aranda</span></a>
+	</nav>
+	<section>
+		<p id="factorial"></p>
+	</section>
+		
+	<script type="text/javascript">
+		var i=prompt("Ingrese un numero para calcular su factorial:");
+		var f=1;
+
+		while(i !=0)
+            {
+                var f = f * i;
+                i--;
+                document.getElementById("factorial").innerHTML="El factorial del número elegido es: "+f;
+            }
+</script>
+<footer id="pie" class="fixed-bottom">
+	<p class="autor">Aranda Granados Diego</p>
+	<p class="autor">Sábado 13 Junio 2020</p>
+	<li class="contact"><a href="https://www.facebook.com/DiegoArandaGr/">Facebook</a></li>
+	<li class="contact"><a href="https://www.instagram.com/luca_raconteur935/">Instagram</a></li>
+	<p class="contact">4776304413</p>
+	<img src="img/GrimmeSombra.png" class="foto">
+</footer>
+</body>
+</html>
