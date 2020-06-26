@@ -1,0 +1,65 @@
+*{
+	padding: 0;
+	margin: 0; 
+}
+
+#name{
+	margin: 70px;
+	margin-bottom: -40px;
+}
+
+#nave{
+	background-color: #1164C7;
+	width: 100%;
+	height: 60px;
+}
+
+#comments{
+	resize: none;
+}
+
+.foto{
+	width: 200px;
+	height: 250px;
+	margin-left: 900px;
+	margin-top: -204px;
+}
+
+.indice{
+	display: inline-grid;
+}
+
+#calcu{
+	margin-left: 20px;
+}
+
+span{
+	color: white;
+}
+
+.contact{
+	padding-left: 40px;
+	color: white;
+}
+
+.autor{
+	text-align: left;
+	margin: 40px;
+}
+
+#pie{
+	bottom: -700px;
+}
+
+#pie2{
+	bottom: -200px;
+}
+
+footer{
+	background-color: black;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 250px;
+  color: white;
+}
