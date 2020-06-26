@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Indie+Flower&family=Sriracha&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Generador de tarjetas</title>
+</head>
+<body >
+<nav id="nave">
+		<a href="index.html"><span id="name"><strong>Diego</strong> Aranda</span></a>
+	</nav>
+	<center><h1>Crea tu tarjeta de Felicitación	</h1></center>
+	<form name="tarjeta" id="opciones" action="#" method="post" style="margin-left: 200px" > 
+		<img src="img/corazon.png" width="5%"><h2>Elige un tema:</h2>
+		<br><br>
+	<label style="margin-left: 100px;" >
+<input type="radio" name="tipoT" id="sv" value="unoo"> San Valentin</label>
+<label style="margin-left: 200px;" >
+<input type="radio" name="tipoT" id="fc" value="doss"> Feliz Cumpleaños </label>
+<label style="margin-left: 300px;" >
+<input type="radio" name="tipoT" id="mot" value="tress">Motivación  </label>
+
+</form>
+<br><br>
+
+<form name=imagen style="margin-left: 200px" > 
+		<img src="img/camara.png" width="5%" ><h2>Elige una imagen:</h2>
+		<br><br>
+		<img src="img/pocoyosanvalentin.jpg" width="30%" height="30%" id="imagen1">
+		<img src="img/piolincumpleaños.png" width="30%" height="30%" id="imagen2" style="margin-left: 30px;">
+		<img src="img/motivación.png" width="30%" height="30%" id="imagen3" style="margin-left: 30px;"><br><br>
+		<label style="margin-left: 100px;"   >
+<input type="Radio" name="imagenes" value="imagen1"   id="imageN1"> San Valentin </label>
+<label style="margin-left: 200px;">
+<input type="Radio" name="imagenes" value="imagen2"  id="imageN2"> Feliz Cumpleaños </label>
+<label style="margin-left: 300px;">
+<input type="Radio" name="imagenes" value="imagen3"  id="imageN3"> Motivación 
+</label>
+
+
+</form>
+<br><br>
+<form name=texto style="margin-left: 300px" > 
+		<img src="img/lapiz.png"  width="5%" style="float: left;"><h1>Título</h1>
+		
+		<textarea placeholder="Capture el cuerpo del mensaje." name="Area" id="ariatxt" rows="11" cols="50" style="float: right;margin-right: 300px;"></textarea>
+
+
+<input type="text" name="Titulo"  placeholder="Capture un título" id="tittle"> <br><br><br><br>
+
+<input type="text" name="Subtitulo"  placeholder="Capture un subtítulo" id="subtittle"> <br> <br><br><br>
+
+<input type="text" name="Nombre" placeholder="Capture el nombre de la persona" id="pernom">
+
+
+</form>
+
+<br><br>
+<form name=texto style="margin-left: 300px" > 
+		<img src="img/cubeta.svg" width="5%" style="float: left;"><h1>Color</h1>
+		<input type="color" name="color" id="bg" style="margin-left: 50px;">
+		<button type="button" onclick="Generador();" style="float: right;margin-right: 400px;height: 50px;width: 200px;margin-bottom: 100px;">Generar</button>
+
+
+</form>
+<script type="text/javascript">
+	function Generador(){
+		//AQUÍ TOMAMOS LOS VALORES QUE FUERON PROPORCIONADO POR EL USUARIO Y LOS GUARDAMOS EN VARIABLES.
+		var Titu,Stitu,Aria,Prn,Cam,Autor,Fecha;
+		
+		Titu=document.getElementById("tittle").value;
+		Stitu=document.getElementById("subtittle").value;
+		Aria=document.getElementById("ariatxt").value;
+		Prn=document.getElementById("pernom").value;
+		Cam=document.getElementById("bg").value;
+		Autor=prompt("Ingresa tu nombre")
+		Fecha=new Date();
+
+			
+		//SAN VALENTIN
+		if(document.getElementById("sv").checked == true){
+			
+			if(document.getElementById("imageN1").checked == true){
+				
+				document.write('<article style="font-family: Dancing Script, cursive; color: red; text-align: center;">'+'<audio src="media/Love_Now.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/pocoyosanvalentin.jpg" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Sin más qué decir, me despido de tí, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		
+		document.body.style.backgroundColor=Cam;
+		
+}
+	else if(document.getElementById("imageN2").checked == true){
+
+		document.write('<article style="font-family: Dancing Script, cursive; color: red; text-align: center;">'+'<audio src="media/Love_Now.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/piolincumpleaños.png" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Sin más qué decir, me despido de tí, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+else if(document.getElementById("imageN3").checked == true){
+
+		document.write('<article style="font-family: Dancing Script, cursive; color: red; text-align: center;">'+'<audio src="media/Love_Now.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/motivación.png" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Sin más qué decir, me despido de tí, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+
+	}
+	//CUMPLEAÑOS
+	else if(document.getElementById("fc").checked == true){
+			if(document.getElementById("imageN1").checked == true){
+
+		document.write('<article style="font-family: Indie Flower, cursive; color: blue; text-align: center;">'+'<audio src="media/Happy_Birthday_Old_Timey.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/pocoyosanvalentin.jpg" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Sin más qué decir, me despido de tí, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+	else if(document.getElementById("imageN2").checked == true){
+
+		document.write('<article style="font-family: Indie Flower, cursive; color: blue; text-align: center;">'+'<audio src="media/Happy_Birthday_Old_Timey.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/piolincumpleaños.png" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Sin más qué decir, me despido de tí, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+else if(document.getElementById("imageN3").checked == true){
+
+		document.write('<article style="font-family: Indie Flower, cursive; color: blue; text-align: center;">'+'<audio src="media/Happy_Birthday_Old_Timey.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/motivación.png" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Sin más qué decir, me despido de tí, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+
+	}
+//MOTIVACIONAL
+	else if(document.getElementById("mot").checked == true){
+			if(document.getElementById("imageN1").checked == true){
+
+		document.write('<article style="font-family: font-family: Sriracha, cursive; color: green; text-align: center;">'+'<audio src="media/Peace_Creek.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/pocoyosanvalentin.jpg" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Sin más qué decir, me despido de tí, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+	else if(document.getElementById("imageN2").checked == true){
+
+		document.write('<article style="font-family: font-family: Sriracha, cursive; color: green; text-align: center;">'+'<audio src="media/Peace_Creek.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/piolincumpleaños.png" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Sin más qué decir, me despido de tí, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+else if(document.getElementById("imageN3").checked == true){
+
+		document.write('<article style="font-family: font-family: Sriracha, cursive; color: green; text-align: center;">'+'<audio src="media/Peace_Creek.mp3" autoplay="" loop>'+'</audio>'+'<h1 style="font-size: 50px; text-align: center;">'+Titu+'</h1>'+'<h2 style="font-size: 40px; text-align: center;">'+Stitu+'</h2>'+'<br>'+'<img src="img/motivación.png" width="70%" height="60%">'+'<br>'+'<p style="text-align: center;">'+Aria+'</p>'+'<br>'+'<br>'+"Sin más qué decir, me despido de tí, "+Prn+"."+'<br>'+'<h3 style="float: right;">'+Autor+'</h3>'+'<h3 style="float:left;">'+Fecha+'</h3>'+'</article>');
+		document.body.style.backgroundColor=Cam;
+}
+
+	}
+
+
+			
+	}
+</script>
+
+</style>
+<footer id="pie" class="fixed-bottom">
+	<p class="autor">Aranda Granados Diego</p>
+	<p class="autor">Sábado 13 Junio 2020</p>
+	<li class="contact"><a href="https://www.facebook.com/DiegoArandaGr/">Facebook</a></li>
+	<li class="contact"><a href="https://www.instagram.com/luca_raconteur935/">Instagram</a></li>
+	<p class="contact">4776304413</p>
+	<img src="img/GrimmeSombra.png" class="foto">
+</footer>
+</body>
+</html>

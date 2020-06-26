@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<head>
+	<title>Bordes y Dom</title>
+</head>
+<body>
+	<nav id="nave" style="background-color: #1164C7;
+	width: 100%;
+	height: 60px;">
+		<a href="index.html"><span id="name"><strong>Diego</strong> Aranda</span></a>
+	</nav>
+	<section>
+		<figure>
+			<img id="imagen" src="img/michael.jpg" style="border:5px solid #f97300" title="prueba de bordes" width="400" height="300" />
+		</figure>
+	</section>
+	<form name="formu">
+		<input type="button" value="Ancho de 20px" onclick="setBorderWidth(20);">
+		<input type="button" value="Ancho de 50px" onclick="setBorderWidth(50);">
+		<select name="tipo" id="mar">
+			<option value="double">Doble</option>
+			<option value="dotted">Punteado</option>
+			<option value="dashed">Guiones</option>
+		</select>
+		<input type="color" name="color" id="change" >
+	</form>
+	<script type="text/javascript">
+		function setBorderWidth(ancho){
+			document.getElementById("imagen").style.borderWidth=ancho+"px";
+			var c=document.getElementById("change").value;
+			document.getElementById("imagen").style.borderColor=c;
+			var m=document.getElementById("mar").value;
+			document.getElementById("imagen").style.borderStyle=m;
+		}
+	</script>
+	<footer id="pie2" class="fixed-bottom">
+	<p class="autor">Aranda Granados Diego</p>
+	<p class="autor">Sábado 13 Junio 2020</p>
+	<li class="contact"><a href="https://www.facebook.com/DiegoArandaGr/">Facebook</a></li>
+	<li class="contact"><a href="https://www.instagram.com/luca_raconteur935/">Instagram</a></li>
+	<p class="contact">4776304413</p>
+	<img src="img/GrimmeSombra.png" style="width: 200px;
+	height: 250px;
+	margin-left: 900px;
+	margin-top: -204px;" class="foto">
+</footer>
+</body>
+</html>

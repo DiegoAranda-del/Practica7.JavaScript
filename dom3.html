@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<meta charset="utf-8">
+<head>
+	<title>Agregar Nodos</title>
+</head>
+<body>
+	<nav id="nave">
+		<a href="index.html"><span id="name"><strong>Diego</strong> Aranda</span></a>
+	</nav>
+	<section id="contenedor">
+		<ul id="lista">
+			<li>Opción 1</li>
+			<li>Opción 2</li>
+			<li>Opción 3</li>
+		</ul>
+		<button type="button" onclick="agregar();" >Agregar Elemento</button>
+	</section>
+	<script type="text/javascript">
+		var n=4;
+		function agregar(){
+			var elemento=document.createElement("li");
+			var texto =document.createTextNode("Opción "+n);
+			elemento.appendChild(texto);
+			var lista=document.getElementById("lista");
+			lista.appendChild(elemento);
+			n=n+1;
+			return n;
+		}
+	</script>
+	<footer id="piee" class="fixed-bottom">
+	<p class="autor">Aranda Granados Diego</p>
+	<p class="autor">Sábado 13 Junio 2020</p>
+	<li class="contact"><a href="https://www.facebook.com/DiegoArandaGr/">Facebook</a></li>
+	<li class="contact"><a href="https://www.instagram.com/luca_raconteur935/">Instagram</a></li>
+	<p class="contact">4776304413</p>
+	<img src="img/GrimmeSombra.png" class="foto">
+</footer>
+</body>
+</html>
